@@ -1,0 +1,31 @@
+<div class="sidenav">
+  <ul class="snavlist">
+      <li class="snavitem navbar-search">
+      <input type="text" id="snavbar-search-input" placeholder="Search...">
+      <button type="button" id="snavbar-search-button"><i class="fas fa-search"></i></button>
+      </li>
+      <li class="snavitem price-search">
+        <input type="text" id="snavbar-price-input" placeholder="Min...">
+        <p> to </p>
+        <input type="text" id="snavbar-price-input" placeholder="Max...">
+      </li>
+      <li class="snavitem availability">
+        <div>
+          <label for="in-stock">In Stock</label>
+          <input type="radio" name="availability" id="in-Stock" value="in-stock" checked>
+        </div>
+        <div>
+          <label for="out-of-stock">Out of Stock</label>
+          <input type="radio" name="availability" id="out-of-stock" value="out-of-stock">
+        </div>
+      </li>
+  </ul>
+</div>
+
+<main class="bookCard-container">
+
+    {{#each bookData}}
+      {{> bookCard}}
+    {{/each}}
+  
+</main>
